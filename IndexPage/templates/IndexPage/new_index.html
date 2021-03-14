@@ -1,0 +1,268 @@
+{% extends "IndexPage/base.html"%}
+{% load static %}
+
+{%block title%}
+<title>寻向网站</title>
+{% endblock title%}
+{%block content%}
+  <section style="padding-left: 10%;">
+    <div class="row">
+      <div class="col-lg-5">
+        <h1 style="color: #9179AB">寻向，</h1>
+        <br>
+        <h2>陪伴留学生找到未来的方向。</h2>
+        <br> <br>
+        <p>寻向是由北美留学生于2018年发起的<b
+            style="font-weight: bold; color: #9179AB;">非营利组织</b>；其目的是通过采访过来人，导师项目，互助社群等形式，帮助留学生了解更多的职业方向和未来发展的可能性，连接在校生和职场人，使知识、经验、资源在留学生中不断传承。
+        </p>
+      </div>
+      <div class="col-lg-1"></div>
+      <div class="col-lg-6">
+        <img src="img/mainbg.svg" class="main-bg" alt="main bg">
+      </div>
+    </div>
+  </section>
+  {%endblock content%}
+
+  {%block module%}
+  <main>
+    <div id="mySidenav" class="align">
+      <a data-toggle="modal" data-target="#contactinfo" id="about"><i class="fab fa-weixin mr-2"></i> 关注我们</a>
+    </div>
+    <div class="modal fade" id="contactinfo" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+      aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLongTitle">寻向微信公众号 <i class="fab fa-weixin mr-2"></i></h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body text-center">
+            <img src="img/qrcode.jpg" alt="QR code">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--Section: 五大板块卡片-->
+    <div class="container">
+      <section style="padding-top: 5%;" class="mt-5" id="blocks">
+        <h2 class="my-5 h2" style="color: #6C758B;">我们的五大板块</h2>
+        <div class="row">
+          <div class="col-lg-6">
+            <a href="notes.html">
+              <div class="card zoom card-main">
+                <div class="card-body">
+                  <div class="row">
+                    <div class="col-6">
+                      <h3 class="cardTitle">寻向笔记</h3>
+                      <img src="img/1line.png" style="position: relative; top: -10px;" alt="line1">
+                      <p class="cardText">记录与讲述留学生梦想与选择的笔记本</p>
+                      <p class="small-anchor">了解更多</p>
+                    </div>
+                    <div class="col-6">
+                      <img src="img/notebook.svg" class="cardBook" alt="notebook">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="col-lg-6">
+            <a href="lianxisheng.html">
+              <div class="card zoom card-main">
+                <div class="card-body">
+                  <div class="row">
+                    <div class="col-6">
+                      <h3 class="cardTitle">寻向练习生</h3>
+                      <img src="img/2line.png" style="position: relative; top: -10px;" alt="line2">
+                      <p class="cardText">帮助留学生成长与进阶的Mentorship</p>
+                      <p class="small-anchor">了解更多</p>
+                    </div>
+                    <div class="col-6">
+                      <img src="img/LXS/maskedperson.svg" class="cardPerson" alt="maskperson">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+        <br>
+        <div class="row">
+          <div class="col-lg-6">
+            <div class="card card-main card-main-disabled">
+              <div class="card-body">
+                <div class="row">
+                  <div class="col-6">
+                    <h3 class="cardTitle">寻向行业</h3>
+                    <img src="img/3line.png" style="position: relative; top: -10px;" alt="line3">
+                    <p class="cardText">围绕行业的职业发展交流社区</p>
+                    <p class="small-anchor comingSoon">敬请期待</p>
+                  </div>
+                  <div class="col-6">
+                    <img src="img/layers.svg" class="cardLayer" alt="layers">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="card card-main card-main-disabled">
+              <div class="card-body">
+                <div class="row">
+                  <div class="col-6">
+                    <h3 class="cardTitle">寻向职场人</h3>
+                    <img src="img/4line.png" style="position: relative; top: -10px;" alt="line4">
+                    <p class="cardText">汇聚留学后年轻职场人的社区</p>
+                    <p class="small-anchor comingSoon">敬请期待</p>
+                  </div>
+                  <div class="col-6">
+                    <img src="img/laptop.svg" class="cardLaptop" alt="laptop">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <br>
+        <div class="row">
+          <div class="col-lg-6">
+            <div class="card card-main card-main-disabled">
+              <div class="card-body">
+                <div class="row">
+                  <div class="col-6">
+                    <h3 class="cardTitle">寻向彼岸</h3>
+                    <img src="img/6line.png" style="position: relative; top: -10px;" alt="line6">
+                    <p class="cardText">连接北美留学家庭的此岸和彼岸</p>
+                    <p class="small-anchor comingSoon">敬请期待</p>
+                  </div>
+                  <div class="col-6">
+                    <img src="img/lighthouse.svg" class="cardHouse" alt="lighthouse">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+  </main>
+
+  <br>
+  <!--Section: 数据和评价-->
+  <section class="mt-5" style="background: url(img/pedal.png) no-repeat; background-size: 1200px 650px;">
+    <div class="container">
+      <div class="row" style="margin-top: 150px;">
+        <div class="col-md-5">
+          <h3 style="color: #2C3A64;">这些年来，我们做了...</h3>
+          <div class="testimony">
+            <ul>
+              <li>
+                <p>我们采访了来自不同行业的 <b>48</b>
+                  名前辈，不仅涉及互联网、咨询、金融等热门行业，也涵盖社科、学术科研、自媒体博主、海外创业等小众领域。</p>
+              </li>
+              <li>
+                <p>寻向共有 <b>15</b> 个大大小小的分享社群，社群覆盖人数近 <b>5000</b> 名留学生、家长与职场人。</p>
+              </li>
+              <li>
+                <p>练习生项目录取了 <b>44</b> 名来自北美高校的在校生，邀请到 <b>17</b>
+                  名职场人加入作为Mentor，组织了共计 <b>120</b>+ 次的无偿公益性 1对1 office hour。练习生已经拿到了包括 <strong>Microsoft</strong>,
+                  <strong>EY</strong>,
+                  <strong>PwC</strong>, <strong>Oracle</strong>, <strong>字节跳动</strong>在内的实习或者全职公司offer。
+                </p>
+              </li>
+              <li>
+                <p>寻向成立了 <b>900</b>+ 天，至今坚持着公益的初心和互助的理念，帮助一届又一届留学生找到更好的未来。</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="col-md-7">
+          <div class="row" style="margin-bottom: 5%;">
+            <div class="col-md-1"></div>
+            <div class="col-md-3">
+              <p class="text-center" style="margin-top: 40%;">Karen Zheng</p>
+              <p class="text-center" style="font-size: 0.8rem;">就读于University of Pennsylvania<br>寻向练习生</p>
+            </div>
+            <div class="col-md-8 first-comment">
+              <div class="card mx-auto card-comments">
+                <div class="card-body" style="color: white;">
+                  寻向的大家都很暖，寻求帮助的时候大家都会竭尽所能。寻向的大家都很强，各行各业优秀的同学都在向着自己的目标和理想努力。寻向的大家都很会，所有话题都能遇到能侃侃而谈，迸发火花的人。从学长学姐那里获得帮助再进而用自己知道的帮助学弟学妹，我在寻向看到了无私传承。所以，寻向入股不亏！
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row" style="margin-bottom: 5%;">
+            <div class="col-md-1"></div>
+            <div class="col-md-8">
+              <div class="card mx-auto card-comments">
+                <div class="card-body" style="color: white;">
+                  人生的路总是孤独，但有志同道合的人，不论怎样都会精彩。来到寻向后，我意识到我们并不孤单，也不是一个人在战斗。在寻向，努力认真的学弟学妹激励着我，同龄人的理想激励着我，寻向作为一个互帮互助的团体，不断给予我继续向上的动力。同样，在如此特殊的留学环境下，寻向的存在给予了这个团体中的每一个成员坚持的勇气、成功的信心，以及对美好未来的希望。作为一名领队，我很开心能跟寻向一起成长、一起进步。愿终有一天，寻向的名字可以和埋藏在大家心中的梦想一起，发光发热。
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3" style="color: #2C3A64;">
+              <p class="text-center middle-comment">Belinda Hu</p>
+              <p class="text-center" style="font-size: 0.8rem;">就职于International Monetary Fund<br>寻向领队</p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-1"></div>
+            <div class="col-md-3" style="color: #2C3A64;">
+              <p class="text-center last-comment">Steven Zhang</p>
+              <p class="text-center" style="font-size: 0.8rem;"> 准大一<br>寻向笔记读者</p>
+            </div>
+            <div class="col-md-8">
+              <div class="card mx-auto card-comments">
+                <div class="card-body" style="color: white;">
+                  虽然作为一个美高学生一直感觉大学和工作远在天边，毫无头绪。但关注寻向之后感觉改变自己的未来真的近在咫尺，有迹可循。只有寻到正确的方向才能让自己的努力有价值，寻向的文章和学哥学姐们真的通过他们实打实的经历让我少走很多弯路。谢谢寻向，让追梦路上不再迷茫孤单。
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!--Section: 寻向分布-->
+  <section class="mt-5" id="aboutteam">
+    <div class="container">
+      <h2 class="h2" style="color: #6C758B; margin-top: 100px;">寻向分布</h2>
+      <br>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div id="schoolLogoSection" class="col-md-5">
+          <div class="d-flex justify-content-center">
+            <h4 class="text-center">院校</h4>
+            <p style="font-size: 14px;">（按首字母排列）</p>
+          </div>
+        </div>
+        <div class="col-md-2" style="height: 80px;"></div>
+        <div id="companyLogoSection" class="col-md-5">
+          <div class="d-flex justify-content-center">
+            <h4 class="text-center">公司</h4>
+            <p style="font-size: 14px;">（按首字母排列）</p>
+          </div>
+        </div>
+      </div>
+      <p class="text-center" style="font-size: 14px;">寻向练习生、寻向成员所在的北美院校和寻向领队、过往分享者来自的公司和组织</p>
+    </div>
+  </section>
+  <br><br><br>
+
+  {%endblock module%}
+
+  <script src="js/jquery-3.4.1.min.js"></script>
+  <script src="js/popper.min.js" async></script>
+  <script src="js/bootstrap.min.js" async></script>
+  <script src="js/mdb.min.js" async></script>
+  <script src="js/index.js" async></script>
+</body>
+
+</html>

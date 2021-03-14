@@ -1,0 +1,463 @@
+{% extends "IndexPage/base.html"%}
+{% load static %}
+
+{%block title%}
+<title>关于我们</title>
+{% endblock title%}
+{%block content%}
+  <!-- Welcome Message -->
+  <!-- border-bottom-left-radius: 1200px 80%; -->
+  <section
+    style="background: url(img/aboutus/aboutusbg.svg); background-size: cover; height: 700px; margin-left: -270px;">
+    <div class="descDiv">
+      <h1 style="color: white; font-family: 'mainfont-medium'; font-size: 3.5rem;">我们的故事</h1>
+      <br>
+      <p class="aboutusDesc" style="color: white; line-height: 1.6;">
+        我们是一群正在或者曾经在美国本科留学的学生，我们和万千留学生一样，感受过对于未来的迷茫和求职找工作的压力。既对未来充满期待，想在这个世界中做一名弄潮儿，却又不知道该从哪条路径从校园走向这个社会。在2018年，在我们结束了自己的秋招之后，我们成立了【寻向】这个平台，希望成为一个始终和留学生们站在一起的公益性组织，用我们的力量，让之后的每一届留学生拥有更多有价值的信息和资源，了解到不同职业的精彩之处，更容易地找到能够给自己指引的前辈。让我们的学弟学妹们少一些迷茫，多一份坚定。
+      </p>
+    </div>
+  </section>
+  <main>
+    <!-- Sidenav Hover Buttons -->
+    <div id="mySidenav" class="align">
+      <a data-toggle="modal" data-target="#contactinfo" id="about"><i class="fab fa-weixin mr-2"></i> 关注我们</a>
+    </div>
+    <div class="modal fade" id="contactinfo" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+      aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">寻向微信公众号 <i class="fab fa-weixin mr-2"></i></h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body text-center">
+            <img src="img/qrcode.jpg" alt="QR code">
+          </div>
+        </div>
+      </div>
+    </div>
+    {%endblock content%}
+    {%block module%}
+    <div class="container">
+      <br><br>
+      <!--Section: Five Principles-->
+      <section class="mt-5 principle-block">
+        <div class="row principle-block" style="margin-top: 1rem;">
+          <div class="col-lg-4 text-center">
+            <div class="container text-center">
+              <img src="img/heart.png" style="margin-bottom: 10px;" alt="heart">
+            </div>
+            <div class="container text-center">
+              <h3>公益</h3>
+            </div>
+            <p class="grey-text">公益是寻向的出发点。我们的目标并非商业利润，而是致力于打造一个把帮助留学生的未来发展作为核心使命的组织。
+              我们的愿景是以公益的形式帮助留学生群体的求职和未来发展，让留学生群体能够获得更多优质的资源，信息与帮助。
+            </p>
+          </div>
+
+          <div class="col-lg-4 text-center">
+            <div class="container text-center">
+              <img src="img/diversity.png" style="margin-bottom: 10px;" alt="heart">
+            </div>
+            <div class="container text-center">
+              <h3>多元</h3>
+            </div>
+            <p class="grey-text">
+              寻向拒绝对成功的单一定义，努力想要为留学生展示关于未来的无数种可能性。在这里，不同人生阶段和方向领域的寻向人分享自己的知识见解，道路选择。他们的讲述帮助后来人找到方向，他们的故事给予后来人选择的勇气。
+            </p>
+          </div>
+
+          <div class="col-lg-4 text-center">
+            <div class="container text-center">
+              <img src="img/passon.png" style="margin-bottom: 10px;" alt="heart">
+            </div>
+            <div class="container text-center">
+              <h3>传承</h3>
+            </div>
+            <p class="grey-text">
+              寻向连接在校生和在职的前辈，让信息和经验能跨越校园和职场的界限，自由地流动。同时，在校生受到帮助，找到方向并且成功进入职场后，再将同样的帮助传递给自己的学弟学妹，让信息和经验在留学生中不断传承。
+            </p>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-6 text-center">
+            <div class="container text-center">
+              <img src="img/solidarity.png" style="margin-bottom: 10px;" alt="heart">
+            </div>
+            <div class="container text-center">
+              <h3>分享</h3>
+            </div>
+            <p class="grey-text shareSolidarity">
+              分享是寻向的DNA。无论是干货，资源，经验，还是想法，思考，心路历程，在这里都是最被期待的声音；无论你是刚拿到第一份实习的学弟学妹，还是驰骋职场江湖多年的留学前辈，寻向都期待着你的分享。
+            </p>
+          </div>
+
+          <div class="col-lg-6 text-center">
+            <div class="container text-center">
+              <img src="img/share.png" style="margin-bottom: 10px;" alt="heart">
+            </div>
+            <div class="container text-center">
+              <h3>团结</h3>
+            </div>
+            <p class="grey-text shareSolidarity">
+              寻向根植于留学生这个群体， 我们认为留学一路有不少的艰辛坎坷，唯有团结互助，才能让这个群体在拥有更好的未来。寻向想要做一股绳, 将校园中,职场中的中国人团结在一起, 发挥更大的能量。
+            </p>
+          </div>
+        </div>
+      </section>
+  </main>
+
+  <!-- Achivements Section -->
+  <section class="mt-5" style="background: url(img/aboutus/2ndcurve.png); background-size: cover;">
+    <div class="row">
+      <div class="col-lg-4" style="margin-top: 345px;">
+        <img src="img/aboutus/champion.svg" alt="champion">
+      </div>
+      <div class="col-lg-8" style="margin-top: 150px;">
+        <h3 style="color: #2C3A64;">这些年来，我们做了...</h3>
+        <div class="container testimony" style="width: 86%; padding-top: 50px;">
+          <ul>
+            <li>
+              <p>我们采访了来自不同行业的 <b>48</b>
+                名前辈，不仅涉及互联网、咨询、金融等热门行业，也涵盖社科、学术科研、自媒体博主、海外创业等小众领域。</p>
+            </li>
+            <li>
+              <p>寻向共有 <b>15</b> 个大大小小的分享社群，社群覆盖人数近 <b>5000</b> 名留学生、家长与职场人。</p>
+            </li>
+            <li>
+              <p>练习生项目录取了 <b>44</b> 名来自北美高校的在校生，邀请到 <b>17</b>
+                名职场人加入作为Mentor，组织了共计 <b>120</b>+ 次的无偿公益性 1对1 office hour。练习生已经拿到了包括Microsoft, EY,
+                PwC, Oracle, 字节跳动在内的实习或者全职公司offer。</p>
+            </li>
+            <li>
+              <p>举办了 <b>20</b>+ 次针对学生和职场人的分享活动，主题包括求职技巧，行业科普，过来人分享等等。</p>
+            </li>
+            <li>
+              <p>寻向成立了 <b>900</b>+ 天，至今坚持着公益的初心和互助的理念，帮助一届又一届留学生找到更好的未来。</p>
+            </li>
+          </ul>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <main>
+    <br>
+    <!--Section: 寻向大家庭-->
+    <br>
+    <section class="mt-5" id="aboutteam">
+      <h2 class=" h2 text-center">寻向团队</h2>
+      <p class="text-center" style="font-size: 14px;">(按照加入寻向时间先后顺序)</p>
+      <br>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-2 col-sm-6 text-center">
+            <img src="img/aboutus/members/1.png" class="avatar-img" alt="avatar1">
+            <br><br>
+            <h4>李兆琦</h4>
+            <p>Deloitte Consulting
+              发起人&联席主席
+            </p>
+          </div>
+          <div class="col-md-2 col-sm-6 text-center">
+            <img src="img/aboutus/members/2.png" class="avatar-img" alt="avatar1">
+            <br><br>
+            <h4>郭添源</h4>
+            <p style="margin-bottom: 0%;">Emory University
+            </p>
+            <p>联席主席</p>
+          </div>
+          <div class="col-md-2 col-sm-6 text-center">
+            <img src="img/aboutus/members/3.png" class="avatar-img" alt="avatar1">
+            <br><br>
+            <h4>黄子桐</h4>
+            <p style="margin-bottom: 0%;">University of Wisconsin-Madison</p>
+            <p>寻向彼岸</p>
+          </div>
+          <div class="col-md-2 col-sm-6 text-center">
+            <img src="img/aboutus/members/4.jpeg" class="avatar-img" alt="avatar1">
+            <br><br>
+            <h4>李若帆</h4>
+            <p style="margin-bottom: 0%;">University of Wisconsin-Madison</p>
+            <p>寻向笔记</p>
+          </div>
+          <div class="col-md-2 col-sm-6 text-center">
+            <img src="img/aboutus/members/5.jpeg" class="avatar-img" alt="avatar1">
+            <br><br>
+            <h4>廉丛菲</h4>
+            <p style="margin-bottom: 0%;">University of Georgia</p>
+            <p>寻向彼岸</p>
+          </div>
+          <div class="col-md-2 col-sm-6 text-center">
+            <img src="img/aboutus/members/6.jpeg" class="avatar-img" alt="avatar1">
+            <br><br>
+            <h4>王思睿</h4>
+            <p style="margin-bottom: 0%;">University of Georgia</p>
+            <p>公关宣传</p>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-2 col-sm-6 text-center">
+            <img src="img/aboutus/members/7.jpeg" class="avatar-img" alt="avatar1">
+            <br><br>
+            <h4>李卓群</h4>
+            <p style="margin-bottom: 0%;">Harvey Mudd College</p>
+            <p>寻向行业&寻向练习生</p>
+          </div>
+          <div class="col-md-2 col-sm-6 text-center">
+            <img src="img/aboutus/members/8.jpg" class="avatar-img" alt="avatar1">
+            <br><br>
+            <h4>周璐也</h4>
+            <p style="margin-bottom: 0%;">Carnegie Mellon University</p>
+            <p>外联&寻向练习生</p>
+          </div>
+          <div class="col-md-2 col-sm-6 text-center">
+            <img src="img/aboutus/members/9.png" class="avatar-img" alt="avatar1">
+            <br><br>
+            <h4>曾诚</h4>
+            <p style="margin-bottom: 0%;">University of Chicago</p>
+            <p>寻向彼岸</p>
+          </div>
+          <div class="col-md-2 col-sm-6 text-center">
+            <img src="img/aboutus/members/10.jpeg" class="avatar-img" alt="avatar1">
+            <br><br>
+            <h4>白青鹭</h4>
+            <p style="margin-bottom: 0%;">University of Wisconsin-Madison</p>
+            <p>人事</p>
+          </div>
+          <div class="col-md-2 col-sm-6 text-center">
+            <img src="img/aboutus/members/11.jpg" class="avatar-img" alt="avatar1">
+            <br><br>
+            <h4>印文卿</h4>
+            <p style="margin-bottom: 0%;">Carnegie Mellon University</p>
+            <p>设计</p>
+          </div>
+          <div class="col-md-2 col-sm-6 text-center">
+            <img src="img/aboutus/members/12a.jpg" class="avatar-img" alt="avatar1">
+            <br><br>
+            <h4>陈昱舜</h4>
+            <p style="margin-bottom: 0%;">University of Wisconsin-Madison</p>
+            <p>技术</p>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-2 col-sm-6 text-center">
+            <img src="img/aboutus/members/13.jpg" class="avatar-img" alt="avatar1">
+            <br><br>
+            <h4>杜睿</h4>
+            <p style="margin-bottom: 0%;">Northwestern University</p>
+            <p>公关宣传</p>
+          </div>
+          <div class="col-md-2 col-sm-6 text-center">
+            <img src="img/aboutus/members/14.jpg" class="avatar-img" alt="avatar1">
+            <br><br>
+            <h4>郭泊远</h4>
+            <p style="margin-bottom: 0%;">Carnegie Mellon University</p>
+            <p>寻向练习生</p>
+          </div>
+          <div class="col-md-2 col-sm-6 text-center">
+            <img src="img/aboutus/members/15.JPG" class="avatar-img" alt="avatar1">
+            <br><br>
+            <h4>王纪圆</h4>
+            <p style="margin-bottom: 0%;">University of California, Santa Barbara</p>
+            <p>寻向笔记</p>
+          </div>
+          <div class="col-md-2 col-sm-6 text-center">
+            <img src="img/aboutus/members/16.png" class="avatar-img" alt="avatar1">
+            <br><br>
+            <h4>黄天舒</h4>
+            <p style="margin-bottom: 0%;" style="margin-bottom: 0%;">New York University</p>
+            <p>外联</p>
+          </div>
+          <div class="col-md-2 col-sm-6 text-center">
+            <img src="img/aboutus/members/17.png" class="avatar-img" alt="avatar1">
+            <br><br>
+            <h4>王雅薇</h4>
+            <p style="margin-bottom: 0%;">University of North Carolina - Chapel Hill</p>
+            <p>公关宣传</p>
+          </div>
+          <div class="col-md-2 col-sm-6 text-center">
+            <img src="img/aboutus/members/18.png" class="avatar-img" alt="avatar1">
+            <br><br>
+            <h4>唐月儿</h4>
+            <p style="margin-bottom: 0%;">Carnegie Mellon University</p>
+            <p>寻向练习生</p>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-2 col-sm-6 text-center">
+            <img src="img/aboutus/members/19.png" class="avatar-img" alt="avatar1">
+            <br><br>
+            <h4>卞颖轩</h4>
+            <p style="margin-bottom: 0%;">Mount Holyoke College</p>
+            <p>寻向彼岸</p>
+          </div>
+          <div class="col-md-2 col-sm-6 text-center">
+            <img src="img/aboutus/members/20.png" class="avatar-img" alt="avatar1">
+            <br><br>
+            <h4>孙雨锶</h4>
+            <p style="margin-bottom: 0%;">New York University</p>
+            <p>寻向笔记</p>
+          </div>
+          <div class="col-md-2 col-sm-6 text-center">
+            <img src="img/aboutus/members/21.png" class="avatar-img" alt="avatar1">
+            <br><br>
+            <h4>栗仲博</h4>
+            <p style="margin-bottom: 0%;">University of Georgia</p>
+            <p>寻向彼岸</p>
+          </div>
+          <div class="col-md-2 col-sm-6 text-center">
+            <img src="img/aboutus/members/22.png" class="avatar-img" alt="avatar1">
+            <br><br>
+            <h4>张柏宁</h4>
+            <p style="margin-bottom: 0%;">New York University</p>
+            <p>寻向练习生</p>
+          </div>
+          <div class="col-md-2 col-sm-6 text-center">
+            <img src="img/aboutus/members/23.png" class="avatar-img" alt="avatar1">
+            <br><br>
+            <h4>吴楚然</h4>
+            <p style="margin-bottom: 0%;">University of Wisconsin-Madison</p>
+            <p>寻向笔记</p>
+          </div>
+          <div class="col-md-2 col-sm-6 text-center">
+            <img src="img/aboutus/members/24.png" class="avatar-img" alt="avatar1">
+            <br><br>
+            <h4>王思加</h4>
+            <p style="margin-bottom: 0%;">Emerson College</p>
+            <p>寻向行业</p>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-2 col-sm-6 text-center">
+            <img src="img/aboutus/members/25.png" class="avatar-img" alt="avatar1">
+            <br><br>
+            <h4>于欣航</h4>
+            <p style="margin-bottom: 0%;">Carnegie Mellon University</p>
+            <p>寻向行业</p>
+          </div>
+          <div class="col-md-2 col-sm-6 text-center">
+            <img src="img/aboutus/members/27.png" class="avatar-img" alt="avatar1">
+            <br><br>
+            <h4>周益安</h4>
+            <p style="margin-bottom: 0%;">Boston University</p>
+            <p>寻向笔记</p>
+          </div>
+          <div class="col-md-2 col-sm-6 text-center">
+            <img src="img/aboutus/members/28.png" class="avatar-img" alt="avatar1">
+            <br><br>
+            <h4>周童欣</h4>
+            <p style="margin-bottom: 0%;">University of Iowa</p>
+            <p>寻向内部建设</p>
+          </div>
+          <div class="col-md-2 col-sm-6 text-center">
+            <img src="img/aboutus/members/30.png" class="avatar-img" alt="avatar1">
+            <br><br>
+            <h4>侯映泽</h4>
+            <p style="margin-bottom: 0%;">University of Wisconsin-Madison</p>
+            <p>技术</p>
+          </div>
+          <div class="col-md-2 col-sm-6 text-center">
+            <img src="img/aboutus/members/31.jpg" class="avatar-img" alt="avatar1">
+            <br><br>
+            <h4>李彦妮</h4>
+            <p style="margin-bottom: 0%;">Skidmore College</p>
+            <p>寻向笔记</p>
+          </div>
+          <div class="col-md-2 col-sm-6 text-center">
+            <img src="img/aboutus/members/29.png" class="avatar-img" alt="avatar1">
+            <br><br>
+            <h4>于小菲</h4>
+            <p style="margin-bottom: 0%;">Emory University</p>
+            <p>寻向笔记</p>
+          </div>
+        </div>
+      </div>
+
+      </div>
+    </section>
+    <br>
+
+    <!-- Comments Sections -->
+    <section class="mt-5" id="achivements">
+      <div class="container" style="margin-top: 100px;">
+        <div class="row">
+          <div class="col-md-2">
+            <div class="d-flex justify-content-center">
+              <img src="img/aboutus/members/7.jpeg" class="avatar-img-2" alt="avatar1">
+            </div>
+            <p class="text-center" style="margin-top: 10px;">李卓群 <br> 寻向行业&寻向练习生 </p>
+          </div>
+          <div class="col-md-10">
+            <div class="card aboutus-comment">
+              <div class="card-body">
+                在寻向的每一分每一秒，我都感动于学长学姐的无私分享，感激自己何其有幸与一群有理想、有抱负、执行力超强的同龄人共事。星星之火，可以燎原；愿未来越来越多优秀的伙伴们加入寻向，我们共同为这项有意义的事业贡献自己的力量，未来可期！
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <br><br>
+        <div class="row">
+          <div class="col-md-10">
+            <div class="card aboutus-comment aboutus-mid-comment">
+              <div class="card-body">
+                在寻向，大家不仅关注你能来带来什么，更关注你的个人成长以及寻向能带给你什么。很多时候，你在寻向做的事情取决于你未来的职业方向以及兴趣。寻向不仅让我的专业能力得到了实际的运用和发挥，它还让我的领导力和沟通能力得到了很大的锻炼。
+              </div>
+            </div>
+          </div>
+          <div class="col-md-2">
+            <div class="d-flex justify-content-center">
+              <img src="img/aboutus/members/11.jpg" class="avatar-img-2" style="margin-left: 5%" alt="avatar1">
+            </div>
+            <p class="text-center" style="margin-top: 10px;">印文卿 <br> 设计 </p>
+          </div>
+        </div>
+
+        <br><br>
+        <div class="row">
+          <div class="col-md-2">
+            <div class="d-flex justify-content-center">
+              <img src="img/aboutus/members/12a.jpg" class="avatar-img-2" alt="avatar1">
+            </div>
+            <p class="text-center" style="margin-top: 10px;">陈昱舜 <br> 技术 </p>
+          </div>
+          <div class="col-md-10">
+            <div class="card aboutus-comment">
+              <div class="card-body">
+                寻向最打动我的一点是大家对于这个组织以及其成员和各类项目的源源不断的热情。无论工作或是学习有多忙碌，大家都会尽心尽力地为互相、为寻向、更是为众多北美留学生创造机会和价值、提供资源和帮助。我相信这是我们共有的一份发自内心的热情和能量。在自己不断成长的同时，实现帮助他人寻找未来方向的更宏大的目标，并希望将那份热情一直传承下去。
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+    <section class="mt-5">
+      <h5 class="text-center" style="padding-top: 5%;">感兴趣加入寻向组织团队？快来看看我们哪些职位需要优秀的你吧！</h5>
+      <div class="container text-center" style="padding-top: 1%; padding-bottom: 7%;">
+        <a href="joinus.html#join" type="button" class="btn button-text"
+          style="background-color: #BBCDFB; color: white; border-radius: 30px;">申请加入</a>
+      </div>
+    </section>
+    </div>
+  </main>
+
+  {% endblock module %}
+
+
+  <script src="js/jquery-3.4.1.min.js"></script>
+  <script src="js/popper.min.js" async></script>
+  <script src="js/bootstrap.min.js" async></script>
+  <script src="js/mdb.min.js" async></script>
+</body>
+
+</html>

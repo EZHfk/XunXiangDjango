@@ -1,0 +1,266 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  {% block title%}{% endblock%}
+  <link rel="icon" href="{% static 'IndexPage/img/logo.ico' %}">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
+  <link href="{% static 'IndexPage/css/bootstrap.min.css'%}" rel="stylesheet">
+  <link href="{% static 'IndexPage/css/mdb.min.css'%}" rel="stylesheet">
+  <link rel="stylesheet" href="{% static 'IndexPage/css/font.css' %}" media="none" onload="this.media='all';">
+  <link rel="stylesheet" href="{% static 'IndexPage/css/main.css' %}">
+  <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous"> -->
+  <style type="text/css">
+    html,
+    body,
+    header,
+    .carousel {
+      height: 60vh;
+    }
+
+    p {
+      font-size: 1.2rem;
+    }
+
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      font-family: 'mainfont-medium';
+    }
+
+    a,
+    .brand {
+      color: inherit;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    @media (max-width: 740px) {
+
+      html,
+      body,
+      header,
+      .carousel {
+        height: 100vh;
+      }
+    }
+
+    @media (min-width: 800px) and (max-width: 850px) {
+
+      html,
+      body,
+      header,
+      .carousel {
+        height: 100vh;
+      }
+    }
+
+    @media (min-width: 800px) and (max-width: 850px) {
+      .navbar:not(.top-nav-collapse) {
+        background: #000000 !important;
+      }
+    }
+    .preload{
+      transition: none
+    }
+  </style>
+</head>
+
+<body>
+
+
+  <!-- Navbar -->
+  <nav class="navbar nav-bg navbar-expand-lg navbar-light scrolling-navbar" style="box-shadow: none !important;">
+    <div class="container">
+
+      <!-- Brand -->
+      <a class="navbar-brand" href="{% url 'XUNXIANG-Home'%}">
+        <img src="{% static 'IndexPage/img/xxlogo.svg' %}" width=140px height=70px alt="XX logo">
+      </a>
+
+      <!-- Collapse -->
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- Links -->
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+        <!-- Navbar -->
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'XUNXIANG-Home'%}">首页</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'XUNXIANG-Home'%}#blocks">寻向板块</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'XUNXIANG-About' %}">关于我们</a>
+          <li class="nav-item">
+            <a class="nav-link" href="joinus.html">加入我们</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="joinus.html#contactus">联系我们</a>
+          </li>
+          <!-- <span class="sr-only">(current)</span> -->
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  {% block content%}{%endblock%}
+  <main>
+    <div id="mySidenav" class="align">
+      <a data-toggle="modal" data-target="#contactinfo" id="about"><i class="fab fa-weixin mr-2"></i> 关注我们</a>
+    </div>
+    <div id="mySidenav2" class="align">
+      <a href="mailto:xunxiangweb@gmail.com" id="email"><i class="fas fa-envelope"></i>&nbsp 联系我们</a>
+    </div>
+    <div class="modal fade" id="contactinfo" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLongTitle">寻向微信公众号 <i class="fab fa-weixin mr-2"></i></h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body text-center">
+            <img src="{%static 'IndexPage/img/qrcode.jpg'%}" alt="QR code">
+          </div>
+          <div class="modal-footer">
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  {%block module%}{%endblock%}
+  <section>
+    <div class="container" style="margin-bottom: 100px;">
+        <h3 style="text-align: center;">了解寻向其他板块内容</h3>
+        <br><br>
+        <h5 style="text-align: center;">寻向笔记 &nbsp • &nbsp 寻向行业 &nbsp • &nbsp 寻向职场人 &nbsp • &nbsp 寻向广场 &nbsp • &nbsp
+            寻向彼岸
+        </h5>
+    </div>
+</section>
+  <!-- Section: 联系我们 -->
+  <section class="jumbotron-bot" style="background-color: #6C758B;" id="contactus">
+    <div class="container">
+      <div class="row">
+        <h2 class="my-5 h2" style="color: white;">联系我们</h2>
+        <a data-toggle="modal" data-target="#contactinfo">
+          <img src="{%static 'IndexPage/img/chat.png'%}" height="50" width="50" style="margin-top: 40px; margin-left: 40px;" alt="chat icon">
+        </a>
+        <a href="mailto:xunxiangweb@gmail.com"><img src="{%static 'IndexPage/img/email.png'%}" height="50" width="50"
+            style="margin-top: 40px; margin-left: 20px;" alt="email icon"></a>
+      </div>
+      <div class="row">
+        <h3 style="margin-left: 20px; margin-right:50px; color: white;">合作</h3>
+        <p style="width: 60%; color: white;">
+          如果你代表个人，社团，组织，或者企业，希望和寻向进行合作</p>
+          <a data-toggle="modal" data-target="#amy" type="button" class="joinus-btn footer-btn"
+          style="color:white">联系我们</a>
+      </div>
+      <div class="row">
+        <h3 style="margin-left: 20px; margin-right:50px; color: white;">投稿</h3>
+        <p style="width: 60%; color: white;">如果你是内容创作者，希望在寻向的平台推广你的内容让更多留学生看到</p>
+        <a data-toggle="modal" data-target="#sunday" type="button" class="joinus-btn footer-btn"
+          style="color:white">联系我们</a>
+      </div>
+      <div class="row">
+        <h3 style="margin-left: 20px; margin-right:50px; color: white;">建议</h3>
+        <p style="width: 60%; color: white;">如果你对寻向或者寻向的某一个板块有任何想法建议，希望告诉寻向团队</p>
+        <a data-toggle="modal" data-target="#zhaoqi" type="button" class="joinus-btn footer-btn"
+          style="color:white">联系我们</a>
+      </div>
+      <!-- <img src="img/logo.png" style="float: right" width=140px height=70px alt="XX logo"> -->
+    </div>
+  </section>
+    <!-- QR codes -->
+    <div class="modal fade" id="amy" tabindex="-1" role="dialog">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">与寻向合作 & 推广 <i class="fab fa-weixin mr-2"></i>
+              </h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body text-center">
+              <img src="img/notes/WechatIMG51.jpg" style="height: 500px; width: 370px;" alt="Amy QR code">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal fade" id="sunday" tabindex="-1" role="dialog">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">在寻向分享 & 投稿 <i class="fab fa-weixin mr-2"></i>
+              </h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body text-center">
+              <img src="img/notes/sundayqrcode.jpg" style="height: 500px; width: 370px;" alt="Sunday QR code">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal fade" id="zhaoqi" tabindex="-1" role="dialog">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">和寻向聊聊 & 建议 <i class="fab fa-weixin mr-2"></i>
+              </h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body text-center">
+              <img src="img/notes/WechatIMG52.jpg" style="height: 500px; width: 370px;" alt="Zhaoqi QR code">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer id="bottom" class="text-center font-small mt-4">
+        <div class="py-3" style="color: #6C758B;">
+          <p>Developed by <a href="https://yushunchen.com/" target="_blank">Yushun Chen</a>; designed by <a
+              href="https://wenqingyin.github.io/" target="_blank">Wenqing Yin</a>,
+            <a href="https://meix.design/" target="_blank">Mei Xia</a> <br> Organized by Sunday Zhou, Zhaoqi Li <br>
+            Special thanks to Linda Li, Yingze Hou, Shuhan Zhang, and Siri Wang
+          </p>
+          <p>© 2020 Copyright: <a href="#"> 寻向网站 </a></p>
+        </div>
+      </footer>
+  <!-- SCRIPTS -->
+  <!-- JQuery -->
+  <script type="text/javascript" src="{% static 'IndexPage/js/jquery-3.4.1.min.js'%}"></script>
+  <!-- Bootstrap tooltips -->
+  <script type="text/javascript" src="{% static 'IndexPage/js/popper.min.js'%}"></script>
+  <!-- Bootstrap core JavaScript -->
+  <script type="text/javascript" src="{% static 'IndexPage/js/bootstrap.min.js'%}"></script>
+  <!-- MDB core JavaScript -->
+  <script type="text/javascript" src="{% static 'IndexPage/js/mdb.min.js'%}"></script>
+  <!-- Initializations -->
+  <script type="text/javascript">
+    // Animations initialization
+    new WOW().init();
+  </script>
+  <script src="{% static 'IndexPage/js/index.js'%}"></script>
+  <script src="{% static 'IndexPage/js/slideshow.js'%}"></script>
+  <script src="{% static 'IndexPage/js/notes.js'%}"></script>
+  </body>
+  </html>
