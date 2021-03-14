@@ -18,13 +18,17 @@ from django.urls import path,include
 from django.contrib.auth import views as auth_views
 from django.conf import settings
 from django.conf.urls.static import static
+from Users import views as user_view
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('',include('IndexPage.urls')),
     path('lianxi/',include('LianXiPage.urls')),
     path('biji/',include('BiJiPage.urls')),
-
+    path('login/',auth_views.LoginView.as_view(template_name='Users/login.html'),name='Login'),
+    path('logout/',auth_views.LogoutView.as_view(template_name = 'Users/logout.html'), name='Logout'),
+    path('register/',user_view.register, name = 'Register'),
+    path('profile/',user_view.profile,name='Profile')
 ]
 
 if settings.DEBUG:

@@ -34,6 +34,7 @@ INSTALLED_APPS = [
     'IndexPage.apps.IndexpageConfig',
     'LianXiPage.apps.LianxipageConfig',
     'BiJiPage.apps.BijipageConfig',
+    'Users.apps.UsersConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -126,3 +127,5 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'Media')
 MEDIA_URL = '/media/'
 CRISPY_TEMPLATE_PACK='bootstrap4'
 X_FRAME_OPTIONS = 'SAMEORIGIN'
+LOGIN_REDIRECT_URL = 'XUNXIANG-Home'
+LOGIN_URL = 'Login'

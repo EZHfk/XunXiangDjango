@@ -27,7 +27,7 @@ class BijiTechListView(ListView):
     template_name = home_template
     queryset = Post.objects.all()
     def get_context_data(self, **kwargs):
-        queryset = Post.objects.filter(category='tech').all().order_by('-date_publish')
+        queryset = Post.objects.filter(category='technology').all().order_by('-date_publish')
         paginator, page, queryset, is_paginated = self.paginate_queryset(queryset,5)
         context = {
             'paginator': paginator,
@@ -44,7 +44,7 @@ class BijiFinListView(ListView):
     template_name = home_template
     queryset = Post.objects.all()
     def get_context_data(self, **kwargs):
-        queryset = Post.objects.filter(category = 'finan').all().order_by('-date_publish')
+        queryset = Post.objects.filter(category = 'finance').all().order_by('-date_publish')
         paginator, page, queryset, is_paginated = self.paginate_queryset(queryset,5)
         context = {
             'paginator': paginator,
@@ -61,7 +61,7 @@ class BijiConsultListView(ListView):
     template_name = home_template
     queryset = Post.objects.all()
     def get_context_data(self, **kwargs):
-        queryset = Post.objects.filter(category = 'consult').all().order_by('-date_publish')
+        queryset = Post.objects.filter(category = 'consulting').all().order_by('-date_publish')
         paginator, page, queryset, is_paginated = self.paginate_queryset(queryset,5)
         context = {
             'paginator': paginator,
@@ -95,7 +95,7 @@ class BijiManuListView(ListView):
     template_name = home_template
     queryset = Post.objects.all()
     def get_context_data(self, **kwargs):
-        queryset = Post.objects.filter(category = 'manufact').all().order_by('-date_publish')
+        queryset = Post.objects.filter(category = 'manufacture').all().order_by('-date_publish')
         paginator, page, queryset, is_paginated = self.paginate_queryset(queryset,5)
         context = {
             'paginator': paginator,

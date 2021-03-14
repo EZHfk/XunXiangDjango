@@ -1,0 +1,15 @@
+{% extends "IndexPage/base.html"%}
+{% load static %}
+{% block content%}
+<div class="container">
+
+    <h2>You have been logged out!</h2>
+    <div class="content-section">
+        <div class="border-top pt-3">
+            <a href="{% url 'Login'%}" style="color: blue;">Login Again</a>
+        </div>
+
+    </div>
+</div>
+
+{% endblock content%}

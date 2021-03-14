@@ -4,11 +4,11 @@ from django.contrib.auth.models import User
 from django.urls import reverse
 
 CATEGORY_CHOICE = [
-    ('tech','科技'),
-    ('finan','金融'),
-    ('consult','资询'),
+    ('technology','科技'),
+    ('finance','金融'),
+    ('consulting','资询'),
     ('art','艺术'),
-    ('manufact','制造'),
+    ('manufacture','制造'),
     ('insurance','保险'),
     ('health','医疗'),
     ('media','传媒'),
@@ -23,14 +23,17 @@ class Post(models.Model):
     title = models.CharField(max_length = 200)
     abstract = models.TextField()
     URL = models.CharField(max_length = 200,default = 'https://')
-    category = models.CharField(max_length = 10,choices = CATEGORY_CHOICE,default = 'tech')
+    category = models.CharField(max_length = 20,choices = CATEGORY_CHOICE,default = 'technology')
     image = models.ImageField(default = 'default.jpg',upload_to='display_pic')
     
     date_publish = models.DateTimeField(default = timezone.now)
     author =models.ForeignKey(User,on_delete=models.CASCADE)
 
     def __str__(self):
-        return self.title
+        return self.title+'--'+self.category
+    
+    def get_tag(self):
+        return CATEGORY_CHOICE[self.category]
 
     def get_absolute_url(self):
         return reverse('BIJI-Home')
