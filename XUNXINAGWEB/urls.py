@@ -28,7 +28,8 @@ urlpatterns = [
     path('login/',auth_views.LoginView.as_view(template_name='Users/login.html'),name='Login'),
     path('logout/',auth_views.LogoutView.as_view(template_name = 'Users/logout.html'), name='Logout'),
     path('register/',user_view.register, name = 'Register'),
-    path('profile/',user_view.profile,name='Profile')
+    path('profile/',user_view.profile,name='Profile'),
+    path('updateprofile/',user_view.update_profile,name='Update_Profile')
 ]
 
 if settings.DEBUG:
