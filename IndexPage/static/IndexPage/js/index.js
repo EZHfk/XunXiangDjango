@@ -1,63 +1,99 @@
-document.addEventListener('DOMContentLoaded',function(event){
-    // array with texts to type in typewriter
-    var dataText = [ "帮助留学生了解未来的无数种可能", "连接起校园和职场", "让经验和知识不断传递"];
+const schoolURLs = [
+  "img/LXS/school/Barnard.png",
+  "img/LXS/school/Bentley.png",
+  "img/LXS/school/BC.png",
+  "img/LXS/school/BU.png",
+  "img/LXS/school/CMU.png",
+  "img/LXS/school/CMC.jpg",
+  "img/LXS/school/Cornell.png",
+  "img/LXS/school/Emerson.png",
+  "img/LXS/school/Emory.png",
+  "img/LXS/school/HMC.png",
+  "img/LXS/school/mainpage/mountHcollege.png",
+  "img/LXS/school/NYU.png",
+  "img/LXS/school/Northwestern.png",
+  "img/LXS/school/Pomona.png",
+  "img/LXS/school/TuftsU.jpg",
+  "img/LXS/school/Tulane.png",
+  "img/LXS/school/UCB.png",
+  "img/LXS/school/mainpage/ucsb.jpg",
+  "img/LXS/school/UNC.png",
+  "img/LXS/school/UChicago.png",
+  "img/LXS/school/UGeorgia.png",
+  "img/LXS/school/mainpage/iowa.png",
+  "img/LXS/school/UMichigan.png",
+  "img/LXS/school/UPenn.png",
+  "img/LXS/school/USC.png",
+  "img/LXS/school/UW-Madison.png",
+  "img/LXS/school/Villanova.jpg",
+  "img/LXS/school/Wesleyan.png",
+];
 
-    // type one text in the typwriter
-    // keeps calling itself until the text is finished
-    function typeWriter(text, i, fnCallback) {
-      // chekc if text isn't finished yet
-      if (i < (text.length)) {
-        // add next character to h1
-       document.querySelector("#typing-text").innerHTML = text.substring(0, i+1) +'<span id="typing-span" aria-hidden="true"></span>';
+const companyURLs = [
+  "img/LXS/company/Alibaba.png",
+  "img/LXS/company/mainpage/BCG.png",
+  "img/LXS/company/ByteDance.png",
+  "img/LXS/company/Deloitte.png",
+  "img/LXS/company/mainpage/godaddy.png",
+  "img/LXS/company/Goldman Sachs.png",
+  "img/LXS/company/Google.png",
+  "img/LXS/company/Hana.png",
+  "img/LXS/company/InterMF.jpg",
+  "img/LXS/company/Info.jpg",
+  "img/LXS/company/Lyft.png",
+  "img/LXS/company/McKinseyCompany.png",
+  "img/LXS/company/mainpage/Microsoft.png",
+  "img/LXS/company/Milliman.png",
+  "img/LXS/company/mainpage/PwC.png",
+  "img/LXS/company/Snap.png",
+  "img/LXS/company/mainpage/tripadvisor.png",
+  "img/LXS/company/Truist.png",
+  "img/LXS/company/mainpage/Tuixiang.png",
+  "img/LXS/company/mainpage/WIstateInvestmentBoard.png",
+  "img/LXS/company/mainpage/Zhenfund.png",
+];
 
-        // wait for a while and call this function again for next character
-        setTimeout(function() {
-          typeWriter(text, i + 1, fnCallback)
-        }, 100);
-      }
-      // text finished, call callback if there is a callback function
-      else if (typeof fnCallback == 'function') {
-        // call callback after timeout
-        setTimeout(fnCallback, 2000);
-      }
+const schoolSection = document.querySelector("#schoolLogoSection");
+const sl = schoolURLs.length;
+const schoolRowNum = sl % 3 === 0 ? Math.floor(sl / 3) : Math.floor(sl / 3) + 1;
+
+for (let i = 0; i < schoolRowNum; i++) {
+  const logoRow = document.createElement("div");
+  logoRow.classList.add("row", "logo-row");
+  for (let j = 0; j < 3; j++) {
+    const col = document.createElement("div");
+    col.classList.add("col-6", "col-md-4", "SCimg-parent");
+    logoRow.append(col);
+    if (!schoolURLs.length) {
+      break;
+    } else {
+      const img = document.createElement("img");
+      img.src = schoolURLs.shift();
+      img.classList.add("SCimg-mp");
+      col.append(img);
     }
-    // start a typewriter animation for a text in the dataText array
-     function StartTextAnimation(i) {
-       if (typeof dataText[i] == 'undefined'){
-          setTimeout(function() {
-            StartTextAnimation(0);
-          }, 20000);
-       }
-       // check if dataText[i] exists
-      if (i < dataText[i].length) {
-        // text exists! start typewriter animation
-       typeWriter(dataText[i], 0, function(){
-         // after callback (and whole text has been animated), start next text
-         StartTextAnimation(i + 1);
-       });
-      }
-    }
-    // start the text animation
-    StartTextAnimation(0);
-  });
-
-  var slideIndex = [1,1];
-/* Class the members of each slideshow group with different CSS classes */
-var slideId = ["mySlides1", "mySlides2"]
-showSlides(1, 0);
-showSlides(1, 1);
-
-function plusSlides(n, no) {
-  showSlides(slideIndex[no] += n, no);
+  }
+  schoolSection.append(logoRow);
 }
 
-function showSlides(n, no) {
-  var i;
-  var x = document.getElementsByClassName(slideId[no]);
-  if (n > x.length) {slideIndex[no] = 1}
-  if (n < 1) {slideIndex[no] = x.length}
-  for (i = 0; i < x.length; i++) {
-    x[i].style.display = "none";
+const companySection = document.querySelector("#companyLogoSection");
+const cl = companyURLs.length
+const companyRowNum = cl % 3 === 0 ? Math.floor(cl / 3) : Math.floor(cl / 3) + 1;
+for (let i = 0; i < companyRowNum; i++) {
+  const logoRow = document.createElement("div");
+  logoRow.classList.add("row", "logo-row");
+  for (let j = 0; j < 3; j++) {
+    const col = document.createElement("div");
+    col.classList.add("col-6", "col-md-4", "SCimg-parent");
+    logoRow.append(col);
+    if (!companyURLs.length) {
+      break;
+    } else {
+      const img = document.createElement("img");
+      img.src = companyURLs.shift();
+      img.classList.add("SCimg-mp");
+      col.append(img);
+    }
   }
-  x[slideIndex[no]-1].style.display = "block";
+  companySection.append(logoRow);
 }
