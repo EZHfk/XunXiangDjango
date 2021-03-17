@@ -1,6 +1,31 @@
 {% extends "IndexPage/base.html"%}
 {% load static %}
 {% load crispy_forms_tags %}
+<script>
+    // Call hideShow when page is loaded
+    django.jQuery(document).ready(function(){
+        django.jQuery('#id_authentication_Token').hide();
+    })
+//     $(document).ready(function(){
+//         $('#id_authentication_Token').hide();
+//     })
+
+//     // call hideShow when the user clicks on the component_type dropdownlist
+//     $('#id_identity').click(function(){
+//         hideShow()
+//     });
+
+// // The jquery function below hides/shows the k_v, DI and length fields depending on the selected component_type 
+// function hideShow(){
+//     if(document.getElementById('id_identity') == "LianXiSheng")
+//     {
+//         $('#id_authentication_Token').hide();
+//     }else
+//     {
+//         $('#id_authentication_Token').show();
+//     }
+// }
+</script>
 {% block content%}
     <div class="container">
         <form method="POST">

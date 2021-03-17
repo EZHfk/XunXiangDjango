@@ -11,6 +11,7 @@ IDENTITY_CHOICE = [
 class Profile(models.Model):
     user = models.OneToOneField(User,on_delete=models.CASCADE,null=True,blank = True)
     identity = models.CharField(max_length = 20,choices = IDENTITY_CHOICE,default = 'LianXiSheng')
+    authentication_Token = models.CharField(max_length = 10,null=True,blank = True)
     profile_Image = models.ImageField(default = 'default_profile.jpg',upload_to='profile_pics')
 
     def __str__(self):

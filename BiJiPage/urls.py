@@ -3,6 +3,7 @@ from . import views
 
 urlpatterns = [
     path('',views.BijiListView.as_view(),name='BIJI-Home'),
+    path('post/facetoface/',views.BijiFaceListView.as_view(),name='BIJI-Face'),
     path('post/tech/',views.BijiTechListView.as_view(),name='BIJI-Tech'),
     path('post/finance/',views.BijiFinListView.as_view(),name='BIJI-Finan'),
     path('post/consult/',views.BijiConsultListView.as_view(),name='BIJI-Consult'),
@@ -16,4 +17,5 @@ urlpatterns = [
     path('post/law/',views.BijiLawListView.as_view(),name='BIJI-Law'),
     path('post/other/',views.BijiOtherListView.as_view(),name='BIJI-Other'),
     path('add/',views.BijiCreateView.as_view(),name='BIJI-Add'),
+    path('<int:pk>/update/',views.BijiUpdateView.as_view(),name='BIJI-Update'),
 ]

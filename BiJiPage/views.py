@@ -23,6 +23,23 @@ class BijiListView(ListView,MultipleObjectMixin):
         context.update(kwargs)
         return super().get_context_data(**context)
 
+class BijiFaceListView(ListView):
+    template_name = home_template
+    queryset = Post.objects.all()
+    def get_context_data(self, **kwargs):
+        queryset = Post.objects.filter(category='facetoface').all().order_by('-date_publish')
+        paginator, page, queryset, is_paginated = self.paginate_queryset(queryset,5)
+        context = {
+            'paginator': paginator,
+            'page_obj': page,
+            'is_paginated': is_paginated,
+            'object_list': queryset
+        }
+        context['original'] = Post.objects.all().order_by('-date_publish')
+        context['filtered'] = queryset
+        context.update(kwargs)
+        return super().get_context_data(**context)
+
 class BijiTechListView(ListView):
     template_name = home_template
     queryset = Post.objects.all()
@@ -227,13 +244,29 @@ class BijiOtherListView(ListView):
         context.update(kwargs)
         return super().get_context_data(**context)
 
-class BijiCreateView(CreateView,LoginRequiredMixin):
+
+class BijiCreateView(LoginRequiredMixin,CreateView):
     model = Post
+    templates = 'BiJiPage/post_form.html'
     fields = ['title','abstract','URL','category','image']
 
     def form_valid(self, form):
         form.instance.author = self.request.user
         return super().form_valid(form)
+
+class BijiUpdateView(LoginRequiredMixin ,UserPassesTestMixin, UpdateView):
+    model=Post
+    template_name = 'BiJiPage/post_update.html'
+    fields = ['title','abstract','URL','category','image']
+    def form_valid(self, form):
+        form.instance.author = self.request.user
+        return super().form_valid(form)
+
+    def test_func(self):
+        post = self.get_object()
+        if self.request.user == post.author:
+            return True
+        return False
 
 class BijiDetailView(DetailView):
     model = Post

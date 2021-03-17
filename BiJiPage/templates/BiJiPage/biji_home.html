@@ -38,9 +38,27 @@
       </div>
   </div>
 </section>
-{%endblock content%}
-
-{% block module %}
+<main>
+    <!-- Sidenav Hover Buttons -->
+    <div id="mySidenav" class="align">
+      <a data-toggle="modal" data-target="#contactinfo" id="about"><i class="fab fa-weixin mr-2"></i> 关注我们</a>
+    </div>
+    <div class="modal fade" id="contactinfo" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+      aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">寻向微信公众号 <i class="fab fa-weixin mr-2"></i></h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body text-center">
+            <img src="{%static 'IndexPage/img/qrcode.jpg'%}" alt="QR code">
+          </div>
+        </div>
+      </div>
+    </div>
 <div class="container">
 
   <!--Section: 最新专访-->
@@ -84,7 +102,7 @@
             <div class="sidelinks">
                 <p><a href="#">全部</a></p>
                 <p><a href="#">人物专访</a></p>
-                <p><a href="#">职场面对面</a></p>
+                <p><a href="{%url 'BIJI-Face'%}#post_start">职场面对面</a></p>
             </div>
             <div class="row">
                 <img src="{% static 'IndexPage/img/notes/greendot.svg'%}" alt="dot">
@@ -121,6 +139,8 @@
                     <div class="col-md-3">
                         <img class="article-img" src="{{post.image.url}}" alt="Placeholder">
                     </div>
+                    
+                    <a style="color: rgb(195, 88, 245);" href="{%url 'BIJI-Update' post.id%}">更新笔记</a>
                 </div>
                 <hr class="mb-5">
             {%endfor%}
@@ -161,9 +181,9 @@
                 </div>
                 <div class="col-md-7">
                     <p style="font-size: 14px;"><b
-                            style="font-size: 2rem;">“</b>Networking的时候要注意节约双方的时间，不要顾左右而言他，要清晰的展现出你的长
+                            style="font-size: 1.2rem;">“</b>Networking的时候要注意节约双方的时间，不要顾左右而言他，要清晰的展现出你的长
                         处和过往经历，然后直截了当的表示出你的目的和需求（比如你希望了解他们工作的哪
-                        些方面，加入哪个组，或者希望他们介绍你认识什么样的人。）<b style="font-size: 2rem;">”</b></p>
+                        些方面，加入哪个组，或者希望他们介绍你认识什么样的人。）<b style="font-size: 1.2rem;">”</b></p>
                 </div>
             </div>
         </div>
@@ -176,9 +196,9 @@
                     <p style="font-size: 14px;">西湖大学生命科学学院研究员，助理教授</p>
                 </div>
                 <div class="col-md-7">
-                    <p style="font-size: 14px;"><span style="font-size: 2rem; line-height: 5px;">“</span>在
+                    <p style="font-size: 14px;"><span style="font-size: 1.2rem; line-height: 5px;">“</span>在
                         industry就业，你研究的东西要能应用，成功率，稳定性比较重要；而在academia，你更需要发现一些新鲜东西，novelty比较重要。从工作角度，academia压力可能会相对大一些；国内外绝大institution都是有考核的tenure
-                        track。<span style="font-size: 2rem;">”</span></p>
+                        track。<span style="font-size: 1.2rem;">”</span></p>
                 </div>
             </div>
         </div>
@@ -191,9 +211,9 @@
                     <p style="font-size: 14px;">读研期间创立了Theor. Inc, 担任CEO</p>
                 </div>
                 <div class="col-md-7">
-                    <p style="font-size: 14px;"><b style="font-size: 2rem;">“</b>
+                    <p style="font-size: 14px;"><b style="font-size: 1.2rem;">“</b>
                         找到合适的工作能让你受益一辈子，因为你以后70%的时间都会花在工作上面。接下来成为一个什么样的人，很大程度是由工作决定的。所以当我在权衡利弊的时候，不是看哪个赚得多，而是看哪个学的多。
-                        <b style="font-size: 2rem;">”</b>
+                        <b style="font-size: 1.2rem;">”</b>
                     </p>
                 </div>
             </div>
@@ -210,9 +230,9 @@
                     <p style="font-size: 14px;">曾实习于real estate，private equity；现就职于PwC</p>
                 </div>
                 <div class="col-md-7">
-                    <p style="font-size: 14px;"><b style="font-size: 2rem;">“</b>
+                    <p style="font-size: 14px;"><b style="font-size: 1.2rem;">“</b>
                         其次是针对商科专业并以后想留在美国的同学的建议：你去一个名气大的国内企业不如去一个美国小公司实习。在美的实习经历能够让其他美国公司相信你对美国公司的运营方式有很好的适应能力。
-                        <b style="font-size: 2rem;">”</b>
+                        <b style="font-size: 1.2rem;">”</b>
                     </p>
                 </div>
             </div>
@@ -227,9 +247,9 @@
                 </div>
                 <div class="col-md-7">
                     <p style="font-size: 14px;"><b
-                            style="font-size: 2rem;">“</b>机器学习是一个inter-disciplinary的工作，需要多方面的技能。
+                            style="font-size: 1.2rem;">“</b>机器学习是一个inter-disciplinary的工作，需要多方面的技能。
                         首先你需要有很强的计算机的功底。一门工程语言是必不可少的（比如C++或Java）。另外，你需要有数据分析的能力。Python对机器学习来说现在应该是最重要的东西，因为现在大多数机器学习的开源库都是用Python写的；另外R语言也是做数据分析很常用的工具。
-                        <b style="font-size: 2rem;">”</b>
+                        <b style="font-size: 1.2rem;">”</b>
                     </p>
                 </div>
             </div>
@@ -243,9 +263,9 @@
                     <p style="font-size: 14px;">UCLA 2019，曾转过3次专业；目前就职于investment industry</p>
                 </div>
                 <div class="col-md-7">
-                    <p style="font-size: 14px;"><b style="font-size: 2rem;">“</b>
+                    <p style="font-size: 14px;"><b style="font-size: 1.2rem;">“</b>
                         Passion很重要。我的经历主要是在价值投资。我觉得重要的是对于新闻、市场还有公司的了解。如果对investment感兴趣的话，在学校里面，我个人认为只埋头学习是不够的。看看你身边都在发生什么，比如关注一下最近哪家公司收购了哪家公司，哪家公司最近IPO(Initial
-                        Public Offerings，首次公开募股），有哪些重大政策调整等等，这些都很依靠平时的积累。<b style="font-size: 2rem;">”</b>
+                        Public Offerings，首次公开募股），有哪些重大政策调整等等，这些都很依靠平时的积累。<b style="font-size: 1.2rem;">”</b>
                     </p>
                 </div>
             </div>
@@ -259,4 +279,4 @@
 <br> <br> <br>
 </div>
 </main>
-{% endblock module%}
+{% endblock content%}

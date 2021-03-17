@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth;
+}
+
 .header-size {
   height: 800px;
 }
@@ -38,6 +42,14 @@ h1 {
   font-size: 6rem;
 }
 
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "mainfont-medium";
+}
+
 .jumbotron {
   height: 35rem;
 }
@@ -69,6 +81,7 @@ h1 {
 
 .card-comments {
   background-color: #6c758b;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
 }
 
 .card-main {
@@ -76,21 +89,21 @@ h1 {
   border-radius: 25px;
 }
 
-.card-joinus {
-  height: 250px;
-  border-radius: 25px;
-  width: 120%;
+.card-main-disabled {
+  background-color: #F6F6F6;
 }
 
-.small-anchor {
-  color: #a4a4a4;
-  font-size: 0.8rem;
+.card-joinus {
+  height: 100%;
+  border-radius: 25px;
+  width: 120%;
 }
 
 /* Card zoom effect */
 .zoom {
   transition: transform 0.2s;
   color: black;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
 }
 
 .zoom:hover {
@@ -100,6 +113,9 @@ h1 {
   /* Safari 3-8 */
   transform: scale(1.1);
   color: black;
+}
+a:hover {
+  text-decoration: none;
 }
 
 #mySidenav a {
@@ -120,31 +136,8 @@ h1 {
   right: 0;
 }
 
-#mySidenav2 a {
-  position: fixed;
-  right: -97px;
-  top: 73%;
-  transition: 0.3s;
-  padding: 10px;
-  width: 138px;
-  text-decoration: none;
-  text-align: right;
-  font-size: 20px;
-  color: white;
-  border-radius: 10px 0 0 10px;
-}
-
-#mySidenav2 a:hover {
-  right: 0;
-}
-
 #about {
   background-color: #4caf50;
-  z-index: 1;
-}
-
-#email {
-  background-color: #2196f3;
   z-index: 1;
 }
 
@@ -156,6 +149,12 @@ h1 {
 body {
   font-family: Verdana, sans-serif;
   margin: 0;
+  font-weight: 300;
+}
+
+.navbar-nav .nav-item .nav-link {
+  color: #000;
+  transition: 0.35s;
 }
 
 .mySlides1,
@@ -170,8 +169,15 @@ img {
 }
 
 /* School and Company images */
+.logo-row {
+  margin-top: 20px;
+}
 .SCimg {
   width: 136px;
+  height: auto;
+}
+.SCimg-mp {
+  width: 120px;
   height: auto;
 }
 
@@ -268,13 +274,7 @@ img {
   padding: 10px 19px 11px 19px;
   border-width: 0px;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
-  color: #fff;
   border-radius: 50px;
-  margin-top: 15px;
-}
-
-.post-num {
-  margin-left: 40px;
 }
 
 .new-post {
@@ -287,6 +287,7 @@ img {
   margin-bottom: 30px;
 }
 .sidelinks p {
+  margin-left: -15px;
   font-size: 16px;
   font-weight: 400;
   line-height: 15px;
@@ -302,6 +303,16 @@ img {
   font-size: 16px;
   margin-top: 10px;
   width: 270px;
+}
+
+.article-title {
+  font-weight: 500;
+  font-size: 18px;
+  margin-top: 10px;
+}
+.article-desc {
+  color: grey;
+  font-size: 16px;
 }
 
 /* Footer paragraph text */
@@ -321,5 +332,230 @@ footer p a {
   .next,
   .text {
     font-size: 11px;
+  }
+}
+
+/* Small Screens */
+@media only screen and (max-width: 600px) {
+  /* Main page */
+  .cardTitle {
+    margin-top: 10px;
+    font-size: 1.5rem;
+  }
+  .cardText {
+    font-size: 0.95rem;
+  }
+  .cardBook {
+    width: 140px;
+    height: 140px;
+    margin-top: 3rem;
+  }
+  .cardPerson {
+    width: 180px;
+    height: 180px;
+    margin-top: 35px;
+    margin-left: -20px;
+  }
+  .cardLayer {
+    width: 160px;
+    height: 160px;
+    margin-top: 30px;
+  }
+  .cardLaptop {
+    width: 180px;
+    height: 100px;
+    margin-top: 70px;
+    margin-left: -10px;
+  }
+  .cardHouse {
+    width: 280px;
+    height: 180px;
+    margin-top: 20px;
+    margin-left: -45px;
+  }
+  .small-anchor {
+    color: #a4a4a4;
+    font-size: 0.8rem;
+    margin-top: 40%;
+  }
+  .testimony {
+    margin-left: -20px;
+  }
+  .testimony p {
+    font-size: medium;
+  }
+  .testimony p b {
+    font-size: 1.5rem;
+  }
+  .testimony strong {
+    font-weight: bold;
+  }
+  .first-comment {
+    margin-bottom: 20%;
+  }
+  .last-comment {
+    margin-top: 10%;
+  }
+
+  /* LXS page */
+  .xxGuide {
+    margin-top: 40px;
+  }
+
+  /* Aboutus Page */
+  .descDiv {
+    margin-left: 50%;
+  }
+  .aboutusDesc {
+    margin-right: 10%;
+    font-size: 13px;
+  }
+  .aboutus-comment {
+    margin-bottom: 20px;
+  }
+
+  /* Joinus Page */
+  .joinusDesc {
+    margin-left: 12%;
+    margin-right: 10%;
+  }
+  .joinusBtn {
+    margin-left: 35%;
+  }
+  .contactDesc {
+    padding-right: 0;
+  }
+  .contactBtn {
+    padding-left: 35%;
+  }
+  .footer-btn {
+    margin: 0 0 5% 45%;
+  }
+
+  /* Notes Page */
+  .notebook {
+    width: 150px;
+    height: 150px;
+    margin-left: 56%;
+  }
+  .leftNav {
+    margin-left: 12%;
+  }
+
+  /* Misc */
+  .contactTitle {
+    margin-left: 10%;
+  }
+}
+
+/* Big Screens */
+@media only screen and (min-width: 601px) {
+  /* Main page */
+  .cardTitle {
+    margin-top: 10px;
+  }
+  .cardText {
+    font-size: 1rem;
+  }
+  .cardBook {
+    width: 140px;
+    height: 140px;
+    margin: 3rem 0 0 4rem;
+  }
+  .cardPerson {
+    width: 200px;
+    height: 200px;
+    margin: 35px 0 0 20px;
+  }
+  .cardLayer {
+    width: 160px;
+    height: 160px;
+    margin: 30px 0 0 35px;
+  }
+  .cardLaptop {
+    width: 220px;
+    height: 150px;
+    margin: 30px 0 0 24px;
+  }
+  .cardHouse {
+    width: 300px;
+    height: 200px;
+    margin-top: 20px;
+  }
+  .small-anchor {
+    color: #a4a4a4;
+    font-size: 0.8rem;
+    margin-top: 25%;
+  }
+  .comingSoon {
+    padding-top: 20px;
+  }
+  .testimony {
+    color: #2c3a64;
+    width: 480px;
+    margin-left: -20px;
+  }
+  .testimony p {
+    padding-top: 10px;
+    /* font-size: medium; */
+  }
+  .testimony p b {
+    font-size: 1.8rem;
+    font-weight: bold;
+  }
+  .testimony strong {
+    font-weight: bold;
+  }
+  .middle-comment {
+    margin-top: 70%;
+  }
+  .last-comment {
+    margin-top: 40%;
+  }
+
+  /* LXS page */
+  .lxsBtn {
+    margin-top: 78px;
+  }
+
+  /* Aboutus Page */
+  .descDiv {
+    margin-left: 60%;
+    width: 35%;
+  }
+  .shareSolidarity {
+    padding: 0 18% 0 18%;
+  }
+  .aboutus-comment {
+    width: 80%;
+  }
+  .aboutus-mid-comment {
+    margin-left: 20%;
+  }
+
+  /* Joinus Page  */
+  .contactDesc {
+    padding-right: 210px;
+  }
+  .contactBtn {
+    padding-left: 20px;
+  }
+  .footer-btn {
+    margin: 0 0 2% 10%;
+  }
+  .contactus-text {
+    margin-top: 8px;
+  }
+
+  /* Notes Page */
+  .notebook {
+    width: 300px;
+    height: 300px;
+    position: relative;
+    bottom: -8px;
+    left: 60px;
+  }
+  .post-num {
+    margin-left: 40px;
   }
 }

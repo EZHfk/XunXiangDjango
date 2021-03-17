@@ -5,11 +5,11 @@
     <form method="POST" enctype="multipart/form-data">
         {% csrf_token %}
         <fieldset class="form-group">
-            <legend class="border-bottom mb-4 ml-4">Create Post</legend>
+            <legend class="border-bottom mb-4 ml-4">添加笔记</legend>
             {{ form|crispy }}
         </fieldset>
         <div class="form-group">
-            <button class="btn btn-outline-infro" type="submit" style="background-color: rgb(96, 0, 134); color: antiquewhite;">Add!</button>
+            <button class="btn btn-outline-infro" type="submit" style="background-color: rgb(96, 0, 134); color: antiquewhite;">添加!</button>
         </div>
     </form>
 </div>

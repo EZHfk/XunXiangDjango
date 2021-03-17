@@ -4,6 +4,7 @@ from django.contrib.auth.models import User
 from django.urls import reverse
 
 CATEGORY_CHOICE = [
+    ('facetoface','面对面'),
     ('technology','科技'),
     ('finance','金融'),
     ('consulting','资询'),

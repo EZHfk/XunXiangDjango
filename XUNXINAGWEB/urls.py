@@ -25,6 +25,7 @@ urlpatterns = [
     path('',include('IndexPage.urls')),
     path('lianxi/',include('LianXiPage.urls')),
     path('biji/',include('BiJiPage.urls')),
+    path('joinus/',include('JoinUsPage.urls')),
     path('login/',auth_views.LoginView.as_view(template_name='Users/login.html'),name='Login'),
     path('logout/',auth_views.LogoutView.as_view(template_name = 'Users/logout.html'), name='Logout'),
     path('register/',user_view.register, name = 'Register'),
