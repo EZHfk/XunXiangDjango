@@ -12,11 +12,8 @@ $ virtualenv env
 # or: python3 -m venv env
 $ source env/bin/activate
 # windows: source env/Scripts/activate
-$ pip install Django
-$ pip install django-crispy-forms
-$ pip install Pillow
+$ pip install -r requirements.txt
 $ python3 manage.py migrate
-$ python3 manage.py create_test_data
 ```
 
 To start the server:
