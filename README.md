@@ -1,5 +1,5 @@
 # XunXiangDjango
-XunXiang Process with BackEnd
+XunXiang Official Website with BackEnd
 
 ## Dev setup
 
